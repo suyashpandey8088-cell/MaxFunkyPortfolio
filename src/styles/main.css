@@ -1,0 +1,14 @@
+/* ════════════════════════════════════════════════════════════════
+   MAXFUNKY PORTFOLIO — stylesheet entry
+   order matters: base → sections → responsive
+   ════════════════════════════════════════════════════════════════ */
+
+@import "./base.css";
+@import "./hero.css";
+@import "./about.css";
+@import "./experience.css";
+@import "./projects.css";
+@import "./skills.css";
+@import "./funky.css";
+@import "./contact.css";
+@import "./responsive.css";

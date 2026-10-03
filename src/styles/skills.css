@@ -1,0 +1,172 @@
+/* ════════════════════════════════════════════════════════════════
+   skills.css — giant scrolling typography field
+   ════════════════════════════════════════════════════════════════ */
+
+.skills {
+  --stroke-c: var(--paper);
+  position: relative;
+  padding: clamp(6rem, 12vh, 9rem) 0 clamp(8rem, 14vh, 11rem);
+  overflow: clip;
+}
+.skills-head {
+  text-align: center;
+}
+.skills-hint {
+  margin-top: 1rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.18em;
+  color: var(--silver);
+}
+
+.skills-rows {
+  margin-top: clamp(3rem, 7vh, 5rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(0.9rem, 2vw, 1.5rem);
+}
+
+.skill-row {
+  --row-accent: var(--purple-soft);
+  position: relative;
+  overflow: hidden;
+  border-block: 1px solid rgba(201, 201, 220, 0.14);
+  padding-block: clamp(0.7rem, 1.6vw, 1.2rem);
+  transition: background-color 0.5s var(--ease-out);
+}
+.skill-row:hover {
+  background: color-mix(in srgb, var(--row-accent) 7%, transparent);
+}
+.skill-row::before,
+.skill-row::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 90px;
+  z-index: 2;
+  pointer-events: none;
+}
+.skill-row::before { left: 0; background: linear-gradient(90deg, var(--black), transparent); }
+.skill-row::after  { right: 0; background: linear-gradient(-90deg, var(--black), transparent); }
+
+.skill-track {
+  display: flex;
+  align-items: center;
+  gap: var(--mq-gap, clamp(1.6rem, 3vw, 2.8rem));
+  --mq-gap: clamp(1.6rem, 3vw, 2.8rem);
+  width: max-content;
+  padding-inline: 1rem;
+  animation: ticker-scroll 28s linear infinite;
+  will-change: transform;
+}
+.skill-row[data-dir="rtl"] .skill-track {
+  animation-direction: reverse;
+}
+.skill-row[data-dir="ltr"] .skill-track { animation-duration: 34s; }
+
+.skill {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.2rem, 5.5vw, 4.6rem);
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--paper);
+  white-space: nowrap;
+  background: none;
+  border: none;
+  padding: 0.2em 0.1em;
+  transition:
+    color 0.3s var(--ease-out),
+    scale 0.4s var(--ease-spring),
+    translate 0.45s var(--ease-out),
+    opacity 0.35s;
+  will-change: transform;
+}
+.skill:hover,
+.skill:focus-visible {
+  color: var(--row-accent);
+  scale: 1.22;
+  z-index: 3;
+}
+.skill.is-dimmed {
+  opacity: 0.28;
+  scale: 0.94;
+}
+.skill-cat {
+  color: var(--row-accent);
+  background: color-mix(in srgb, var(--row-accent) 14%, transparent);
+  border: 1.5px solid var(--row-accent);
+  border-radius: 999px;
+  padding: 0.22em 0.7em;
+  font-size: clamp(1.2rem, 2.6vw, 2rem);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.skill-sep {
+  color: color-mix(in srgb, var(--row-accent) 70%, transparent);
+  font-size: clamp(1.2rem, 2.4vw, 2rem);
+}
+
+.sr-1 { --row-accent: var(--purple-soft); }
+.sr-2 { --row-accent: var(--orange); }
+.sr-3 { --row-accent: var(--cyan); }
+.sr-4 { --row-accent: var(--acid); }
+
+/* floating description bubble */
+.skill-desc {
+  position: fixed;
+  left: 50%;
+  bottom: 1.4rem;
+  translate: -50% 0;
+  z-index: 950;
+  padding: 0.8rem 1.4rem;
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--black);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  border: 2px solid var(--black);
+  box-shadow: 4px 4px 0 var(--pink);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s var(--ease-out), translate 0.35s var(--ease-spring);
+  white-space: nowrap;
+  max-width: min(92vw, 40rem);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.skill-desc.is-visible {
+  opacity: 1;
+  translate: -50% -6px;
+}
+
+/* rotating orbit deco */
+.skills-orbit {
+  position: absolute;
+  top: 4rem;
+  right: -7rem;
+  width: 15rem;
+  height: 15rem;
+  pointer-events: none;
+  opacity: 0.5;
+}
+.orbit-svg {
+  width: 100%;
+  height: 100%;
+  animation: spin-slow 22s linear infinite;
+}
+.orbit-svg text {
+  font-size: 15px;
+  letter-spacing: 0.42em;
+  fill: var(--silver);
+}
+.orbit-core {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  color: var(--pink);
+}

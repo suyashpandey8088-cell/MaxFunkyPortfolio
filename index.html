@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SUYASH PANDEY — AI × DATA × WEB × EXPERIMENTATION</title>
+  <meta name="description" content="Suyash Pandey — AI & Data Science engineering student. A maximalist digital playground of projects, experiments and scroll-driven chaos." />
+  <meta name="theme-color" content="#0a0a12" />
+  <meta property="og:title" content="SUYASH PANDEY — AI × DATA × WEB" />
+  <meta property="og:description" content="A digital playground that happens to be a portfolio. Scroll carefully." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+  <script>document.documentElement.classList.add('js');</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <!-- ═══════════════ PRELOADER ═══════════════ -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="pre-inner">
+      <p class="pre-tag mono">SUYASH PANDEY // PORTFOLIO_v2.0</p>
+      <div class="pre-count" id="pre-count">000</div>
+      <div class="pre-bar"><span class="pre-bar-fill" id="pre-bar-fill"></span></div>
+      <p class="pre-msg mono" id="pre-msg">WAKING UP THE PIXELS…</p>
+    </div>
+    <div class="pre-deco mono" aria-hidden="true">
+      <span class="pre-corner pre-tl">[ SYS.BOOT ]</span>
+      <span class="pre-corner pre-tr">60 FPS ✓</span>
+      <span class="pre-corner pre-bl">EST. 2026</span>
+      <span class="pre-corner pre-br">MAXFUNKY™</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════ BACKDROP / GRAIN / PROGRESS / CURSOR ═══════════════ -->
+  <div class="backdrop" aria-hidden="true">
+    <div class="bd-layer bd-base" data-bd="hero"></div>
+    <div class="bd-blob bd-blob-a"></div>
+    <div class="bd-blob bd-blob-b"></div>
+    <div class="bd-blob bd-blob-c"></div>
+    <div class="bd-grid"></div>
+  </div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="progress" aria-hidden="true">
+    <span class="progress-num mono" id="progress-num">001</span>
+    <div class="progress-track"><span class="progress-dot" id="progress-dot"></span></div>
+    <span class="progress-end mono">100</span>
+  </div>
+
+  <div class="cursor-dot" id="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursor-ring" aria-hidden="true"><span class="cursor-label mono" id="cursor-label"></span></div>
+
+  <!-- ═══════════════ NAV ═══════════════ -->
+  <header class="nav" id="nav">
+    <nav class="nav-pill" aria-label="Primary navigation">
+      <span class="nav-indicator" id="nav-indicator" aria-hidden="true"></span>
+      <a class="nav-link mono" href="#home" data-scroll data-section="home">HOME</a>
+      <a class="nav-link mono" href="#about" data-scroll data-section="about">ABOUT</a>
+      <a class="nav-link mono" href="#experience" data-scroll data-section="experience">EXPERIENCE</a>
+      <a class="nav-link mono" href="#projects" data-scroll data-section="projects">PROJECTS</a>
+      <a class="nav-link mono" href="#skills" data-scroll data-section="skills">SKILLS</a>
+      <a class="nav-link mono" href="#contact" data-scroll data-section="contact">CONTACT</a>
+    </nav>
+    <button class="nav-burger mono" id="nav-burger" aria-expanded="false" aria-controls="menu-overlay">
+      <span class="burger-dot"></span>MENU
+    </button>
+  </header>
+
+  <div class="menu-overlay" id="menu-overlay" aria-hidden="true">
+    <nav class="menu-links" aria-label="Mobile navigation">
+      <a class="menu-link" href="#home" data-scroll><span class="mono menu-idx">01</span>HOME</a>
+      <a class="menu-link" href="#about" data-scroll><span class="mono menu-idx">02</span>ABOUT</a>
+      <a class="menu-link" href="#experience" data-scroll><span class="mono menu-idx">03</span>EXPERIENCE</a>
+      <a class="menu-link" href="#projects" data-scroll><span class="mono menu-idx">04</span>PROJECTS</a>
+      <a class="menu-link" href="#skills" data-scroll><span class="mono menu-idx">05</span>SKILLS</a>
+      <a class="menu-link" href="#contact" data-scroll><span class="mono menu-idx">06</span>CONTACT</a>
+    </nav>
+    <p class="menu-foot mono">SUYASH PANDEY — AI × DATA × WEB ✦ SEE YOU DOWN THERE ↓</p>
+  </div>
+
+  <main id="main">
+    <!-- ═══════════════ HERO ═══════════════ -->
+    <section class="hero" id="home" aria-label="Introduction">
+      <div class="hero-inner">
+        <p class="hero-eyebrow mono" data-hero-fade><span class="live-dot"></span>PORTFOLIO.EXE — STATUS: ONLINE</p>
+        <h1 class="hero-name" aria-label="Suyash Pandey">
+          <span class="hero-line hero-line-1" data-split-chars>SUYASH</span>
+          <span class="hero-line hero-line-2" data-split-chars data-outline>PANDEY</span>
+        </h1>
+        <div class="hero-meta" data-hero-fade>
+          <p class="hero-role mono">AI &amp; DATA SCIENCE ENGINEERING</p>
+          <p class="hero-statement">I build, experiment, break things,<br />and turn ideas into digital experiences.</p>
+        </div>
+      </div>
+
+      <div class="hero-deco" aria-hidden="true">
+        <span class="floaty f-star" data-speed="-18">✦</span>
+        <span class="floaty f-star-sm" data-speed="26">✦</span>
+        <span class="floaty f-arrow" data-speed="14">→</span>
+        <span class="floaty f-arrow-d" data-speed="-12">↓</span>
+        <span class="floaty f-blob" data-speed="20"></span>
+        <span class="floaty f-ring" data-speed="-24"></span>
+        <span class="floaty f-ring-sm" data-speed="16"></span>
+        <span class="floaty f-cross" data-speed="-10">+</span>
+        <span class="floaty f-cross-sm" data-speed="22">+</span>
+        <span class="floaty f-label mono" data-speed="-30">[ 25.61°N // 85.13°E ]</span>
+        <span class="floaty f-label2 mono" data-speed="34">AI // DATA // WEB</span>
+        <span class="floaty f-tag mono" data-speed="-16">&lt;/SCROLL_IS_THE_INTERFACE&gt;</span>
+        <span class="floaty f-dots" data-speed="12"></span>
+        <span class="floaty f-sticker mono" data-speed="-20">EST. 2026 ★</span>
+        <span class="floaty f-cursor mono" data-speed="18">▮_</span>
+      </div>
+
+      <div class="scroll-hint mono" aria-hidden="true">
+        <span>SCROLL TO EXPLORE</span><span class="hint-arrow">↓</span>
+      </div>
+    </section>
+
+    <div class="ticker ticker-acid" aria-hidden="true">
+      <div class="ticker-track" id="ticker-1">
+        <span class="ticker-item">WELCOME TO THE CHAOS</span><span class="ticker-star">✦</span>
+        <span class="ticker-item">AI ENGINEER IN TRAINING</span><span class="ticker-star">✦</span>
+        <span class="ticker-item">SCROLL IS THE INTERFACE</span><span class="ticker-star">✦</span>
+        <span class="ticker-item">BREAK → BUILD → REPEAT</span><span class="ticker-star">✦</span>
+      </div>
+    </div>
+
+    <!-- ═══════════════ STATEMENTS (HERO → ABOUT BRIDGE) ═══════════════ -->
+    <section class="statements" id="statements" aria-label="Manifesto">
+      <div class="statements-pin" id="statements-pin">
+        <div class="statement st-1">
+          <p class="statement-tag mono">// MANIFESTO_001</p>
+          <h2 class="statement-big" data-split-chars>CURIOUS BY DEFAULT.</h2>
+          <span class="statement-underline" aria-hidden="true"></span>
+        </div>
+        <div class="statement st-2">
+          <p class="statement-tag mono">// MANIFESTO_002</p>
+          <h3 class="statement-sub">
+            BUILDING AT THE INTERSECTION OF <em class="w-ai">AI</em>, <em class="w-data">DATA</em>, <em class="w-web">WEB</em> &amp; <em class="w-creative">CREATIVE TECHNOLOGY</em>.
+          </h3>
+          <div class="statement-arrow" aria-hidden="true">↓</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ ABOUT ═══════════════ -->
+    <section class="about" id="about" aria-label="About me">
+      <div class="about-giant" aria-hidden="true">ABOUT</div>
+      <span class="about-caption mono" aria-hidden="true">FIG.01 — THE HUMAN BEHIND THE SCROLL ↺</span>
+
+      <div class="container about-grid">
+        <div class="about-head">
+          <p class="sec-tag mono" data-reveal-up>SEC.01 — WHO IS THIS GUY?</p>
+          <h2 class="sec-title" data-reveal-up>ABOUT <span class="txt-stroke">ME<span class="sec-title-dot">.</span></span></h2>
+        </div>
+
+        <div class="about-copy">
+          <p class="about-intro" data-reveal-up>
+            I’m <mark>Suyash Pandey</mark>, an <mark>AI &amp; Data Science</mark> engineering student who enjoys
+            experimenting with technology, building digital experiences and turning ideas into practical projects.
+          </p>
+          <p class="about-note" data-reveal-up>
+            Most of my time goes into learning how machines learn — then bending them into websites, dashboards,
+            agents and weird little experiments. If it runs in a browser or a notebook, I’m probably interested.
+            <span class="about-doodle mono" aria-hidden="true">i broke it → i fixed it → i learned it ★</span>
+          </p>
+
+          <div class="exploring" data-reveal-up>
+            <p class="exploring-label mono">CURRENTLY EXPLORING →</p>
+            <p class="exploring-word" aria-live="polite"><span class="exploring-word-inner" id="exploring-word">AI</span></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-cards" aria-label="Things I’m into">
+        <div class="info-card ic-1" data-speed="-8"><span class="ic-icon" aria-hidden="true">◉</span><span class="ic-label">AI &amp; Data Science</span><span class="ic-idx mono">01</span></div>
+        <div class="info-card ic-2" data-speed="10"><span class="ic-icon" aria-hidden="true">⌘</span><span class="ic-label">Web Development</span><span class="ic-idx mono">02</span></div>
+        <div class="info-card ic-3" data-speed="-14"><span class="ic-icon" aria-hidden="true">▚</span><span class="ic-label">Data</span><span class="ic-idx mono">03</span></div>
+        <div class="info-card ic-4" data-speed="12"><span class="ic-icon" aria-hidden="true">✕</span><span class="ic-label">Problem Solving</span><span class="ic-idx mono">04</span></div>
+        <div class="info-card ic-5" data-speed="-6"><span class="ic-icon" aria-hidden="true">✦</span><span class="ic-label">Creative Technology</span><span class="ic-idx mono">05</span></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ EXPERIENCE ═══════════════ -->
+    <section class="experience" id="experience" aria-label="Experience">
+      <div class="container xp-head">
+        <p class="sec-tag mono" data-reveal-up>SEC.02 — THE JOURNEY SO FAR</p>
+        <h2 class="sec-title" data-reveal-up>WHERE I’VE <span class="txt-stroke">BEEN</span></h2>
+        <p class="xp-count mono" aria-hidden="true"><span id="xp-current">01</span>—05</p>
+      </div>
+
+      <div class="xp-wrap" id="xp-wrap">
+        <div class="xp-hint mono" aria-hidden="true">↓ KEEP SCROLLING — YES, IT GOES SIDEWAYS →</div>
+        <div class="xp-track" id="xp-track"><!-- experience cards injected by JS --></div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ PROJECTS ═══════════════ -->
+    <section class="projects" id="projects" aria-label="Projects">
+      <div class="container">
+        <div class="projects-head">
+          <p class="sec-tag mono" data-reveal-up>SEC.03 — SELECTED CHAOS</p>
+          <h2 class="projects-title" aria-label="Things I've built">
+            <span class="pt-word" data-kinetic>THINGS</span>
+            <span class="pt-word pt-outline" data-kinetic>I’VE</span>
+            <span class="pt-word pt-accent" data-kinetic>BUILT</span>
+          </h2>
+          <p class="projects-sub" data-reveal-up>Five builds. Five personalities. Click one — they like attention.</p>
+        </div>
+
+        <div class="project-grid">
+          <!-- 01 — AI -->
+          <article class="pcard pcard-ai" data-project="neural-chatter" data-cursor="VIEW →" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open project: Neural Chatter, AI project">
+            <div class="pcard-top mono"><span class="pcard-tag">◉ AI PROJECT</span><span class="pcard-year">2025</span></div>
+            <div class="pcard-visual pv-ai" aria-hidden="true">
+              <div class="pv-chat">
+                <span class="pv-bubble pv-bot">hey! ask me anything ✦</span>
+                <span class="pv-bubble pv-user">explain gravity, but funky</span>
+                <span class="pv-bubble pv-bot">it’s the universe hugging you ↓</span>
+                <span class="pv-typing"><i></i><i></i><i></i></span>
+              </div>
+              <span class="pv-ring"></span>
+              <span class="pv-label mono">MODEL: GPT-ISH_V3</span>
+              <span class="pv-scan"></span>
+            </div>
+            <div class="pcard-bottom">
+              <h3 class="pcard-title">NEURAL<br />CHATTER</h3>
+              <p class="pcard-desc">An LLM-powered chat interface with personality presets, streaming replies and a prompt playground.</p>
+              <span class="pcard-arrow" aria-hidden="true">→</span>
+            </div>
+          </article>
+
+          <!-- 02 — DATA -->
+          <article class="pcard pcard-data" data-project="pulseboard" data-cursor="VIEW →" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open project: Pulseboard, data project">
+            <div class="pcard-top mono"><span class="pcard-tag">▚ DATA PROJECT</span><span class="pcard-year">2024</span></div>
+            <div class="pcard-visual pv-data" aria-hidden="true">
+              <div class="pv-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="pv-spark"><svg viewBox="0 0 100 30" preserveAspectRatio="none"><polyline points="0,24 14,20 28,22 42,10 56,14 70,6 84,12 100,3" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+              <span class="pv-kv mono">ROWS: 84,201</span>
+              <span class="pv-kv2 mono">Δ +12.4%</span>
+            </div>
+            <div class="pcard-bottom">
+              <h3 class="pcard-title">PULSE<br />BOARD</h3>
+              <p class="pcard-desc">A data dashboard that turns messy CSVs into living, breathing visual stories.</p>
+              <span class="pcard-arrow" aria-hidden="true">→</span>
+            </div>
+          </article>
+
+          <!-- 03 — WEB -->
+          <article class="pcard pcard-web" data-project="funky-framework" data-cursor="VIEW →" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open project: Funky Framework, web project">
+            <div class="pcard-top mono"><span class="pcard-tag">▶ WEB PROJECT</span><span class="pcard-year">2025</span></div>
+            <div class="pcard-visual pv-web" aria-hidden="true">
+              <pre class="pv-code mono">.fun { chaos: 100%;
+  scroll: smooth;
+  vibes:  max; }</pre>
+              <span class="pv-badge mono">v1.0 ★</span>
+              <span class="pv-arrowbox">→→→</span>
+            </div>
+            <div class="pcard-bottom">
+              <h3 class="pcard-title">FUNKY.<br />FRAMEWORK</h3>
+              <p class="pcard-desc">An experimental motion library — scroll toys, cursor games and typographic chaos.</p>
+              <span class="pcard-arrow" aria-hidden="true">→</span>
+            </div>
+          </article>
+
+          <!-- 04 — HACKATHON -->
+          <article class="pcard pcard-hack" data-project="chaosbot" data-cursor="VIEW →" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open project: Chaosbot, hackathon project">
+            <div class="pcard-top mono"><span class="pcard-tag">⚡ HACKATHON — 48H</span><span class="pcard-year">2025</span></div>
+            <div class="pcard-visual pv-hack" aria-hidden="true">
+              <span class="pv-count mono" id="hack-count">47:59:58</span>
+              <span class="pv-tape pv-tape-a">NO SLEEP CLUB</span>
+              <span class="pv-tape pv-tape-b">IT WORKS ON MY MACHINE</span>
+              <span class="pv-shipped mono">✓ SHIPPED IT</span>
+              <span class="pv-zap">⚡</span>
+            </div>
+            <div class="pcard-bottom">
+              <h3 class="pcard-title">CHAOS<br />BOT-48H</h3>
+              <p class="pcard-desc">A 48-hour build: an AI agent that plans, jokes, and occasionally does actual work.</p>
+              <span class="pcard-arrow" aria-hidden="true">→</span>
+            </div>
+          </article>
+
+          <!-- 05 — CREATIVE -->
+          <article class="pcard pcard-creative" data-project="pixelplay" data-cursor="VIEW →" tabindex="0" role="button" aria-haspopup="dialog" aria-label="Open project: Pixelplay, creative project">
+            <div class="pcard-top mono"><span class="pcard-tag">✦ CREATIVE</span><span class="pcard-year">2026</span></div>
+            <div class="pcard-visual pv-creative" aria-hidden="true">
+              <span class="pv-blob-a"></span>
+              <span class="pv-blob-b"></span>
+              <span class="pv-blob-c"></span>
+              <span class="pv-smile mono">:)</span>
+            </div>
+            <div class="pcard-bottom">
+              <h3 class="pcard-title">PIXEL<br />PLAY</h3>
+              <p class="pcard-desc">Generative art toys — blob makers, gradient mixers and stochastic sticker printers.</p>
+              <span class="pcard-arrow" aria-hidden="true">→</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════ SKILLS ═══════════════ -->
+    <section class="skills" id="skills" aria-label="Skills">
+      <div class="container skills-head">
+        <p class="sec-tag mono" data-reveal-up>SEC.04 — THE ARSENAL</p>
+        <h2 class="sec-title" data-reveal-up>WHAT I <span class="txt-stroke">WORK</span> WITH</h2>
+        <p class="skills-hint mono" data-reveal-up>↑ HOVER A SKILL — THEY BITE (GENTLY)</p>
+      </div>
+      <div class="skills-rows" id="skills-rows"><!-- marquee rows injected by JS --></div>
+      <div class="skill-desc mono" id="skill-desc" aria-live="polite"><span id="skill-desc-text">HOVER A SKILL TO SEE THE LORE</span></div>
+      <div class="skills-orbit" aria-hidden="true">
+        <svg viewBox="0 0 200 200" class="orbit-svg">
+          <defs><path id="orbit-circle" d="M 100,100 m -78,0 a 78,78 0 1,1 156,0 a 78,78 0 1,1 -156,0" /></defs>
+          <text class="mono"><textPath href="#orbit-circle">SKILLS × SKILLS × SKILLS × SKILLS × SKILLS ×</textPath></text>
+        </svg>
+        <span class="orbit-core">✦</span>
+      </div>
+    </section>
+
+    <!-- ═══════════════ FUNKY PLAYGROUND ═══════════════ -->
+    <section class="funky" id="more" aria-label="Playground">
+      <div class="container funky-inner">
+        <p class="sec-tag sec-tag-dark mono" data-reveal-up>SEC.05 — INTERMISSION</p>
+        <h2 class="funky-title" data-reveal-up>
+          WAIT…<br />THERE’S <span class="funky-more">MORE</span>
+        </h2>
+        <p class="funky-line" data-reveal-up>I like building things that don’t feel ordinary.</p>
+
+        <div class="playground" id="playground">
+          <div class="eyes" aria-hidden="true">
+            <div class="eye"><span class="pupil"></span></div>
+            <div class="eye"><span class="pupil"></span></div>
+            <p class="eyes-caption mono">the site is watching you. politely.</p>
+          </div>
+
+          <button class="stick stick-note mono" data-drag tabindex="0">DRAG ME ✋</button>
+          <button class="stick stick-star" data-drag tabindex="0" aria-label="Draggable star sticker">✦</button>
+          <div class="stick stick-tape mono" data-drag>it’s not a bug, it’s a feature</div>
+          <div class="stick stick-smile" data-drag>☺</div>
+          <div class="stick stick-arrow" data-drag>→</div>
+
+          <div class="phrase-machine">
+            <p class="pm-label mono">VIBE GENERATOR v0.9</p>
+            <p class="phrase-out" id="phrase-out">“pixels are just tiny vibes”</p>
+            <button class="btn btn-dark magnetic" id="phrase-btn" data-cursor="CLICK">GENERATE A VIBE →</button>
+          </div>
+
+          <button class="btn btn-dark magnetic funky-boop" id="boop-btn" data-cursor="BOOP">BOOP</button>
+          <p class="sys-msg mono" id="sys-msg" aria-live="polite">&gt; user is having fun… ok_</p>
+          <span class="hidden-star" id="hidden-star" title="psst… click me 5 times">✧</span>
+        </div>
+      </div>
+      <p class="funky-foot mono" aria-hidden="true">← THIS SECTION HAS NO DEEP MEANING. IT’S JUST FUN. →</p>
+    </section>
+
+    <!-- ═══════════════ CONTACT ═══════════════ -->
+    <section class="contact" id="contact" aria-label="Contact">
+      <div class="container contact-inner">
+        <p class="sec-tag mono" data-reveal-up>SEC.06 — FINAL TRANSMISSION</p>
+        <h2 class="contact-title" aria-label="Let's build something weird.">
+          <span class="ct-line" data-split-chars>LET’S BUILD</span>
+          <span class="ct-line ct-weird" data-split-chars>SOMETHING</span>
+          <span class="ct-line ct-outline" data-split-chars>WEIRD.</span>
+        </h2>
+        <p class="contact-sub" data-reveal-up>Have an idea, project, experiment or opportunity? Let’s talk.</p>
+
+        <div class="contact-actions" data-reveal-up>
+          <a class="btn btn-primary magnetic" id="contact-email" href="mailto:hello@example.com" data-cursor="MAIL">SAY HELLO →</a>
+          <a class="btn magnetic" data-contact="github" href="https://github.com/suyashpandey8088-cell" target="_blank" rel="noopener noreferrer" data-cursor="CODE">GITHUB ↗</a>
+          <a class="btn magnetic" data-contact="linkedin" href="#" target="_blank" rel="noopener noreferrer" data-cursor="LINK">LINKEDIN ↗</a>
+          <a class="btn magnetic" data-contact="instagram" href="#" target="_blank" rel="noopener noreferrer" data-cursor="PIC">INSTAGRAM ↗</a>
+        </div>
+
+        <div class="contact-meta mono" aria-hidden="true">
+          <span>[ REPLY TIME: FASTER THAN MY MODELS TRAIN ]</span>
+          <span>[ SIGNAL: STRONG ]</span>
+          <span>[ COFFEE LEVEL: MONITORING ]</span>
+        </div>
+      </div>
+      <div class="contact-glow" aria-hidden="true"></div>
+    </section>
+  </main>
+
+  <!-- ═══════════════ FOOTER ═══════════════ -->
+  <footer class="footer" aria-label="Footer">
+    <div class="footer-ticker" aria-hidden="true">
+      <div class="ticker-track" id="ticker-2">
+        <span class="ticker-item">SUYASH PANDEY</span><span class="ticker-star">✦</span>
+        <span class="ticker-item">AI × DATA × WEB × EXPERIMENTATION</span><span class="ticker-star">✦</span>
+      </div>
+    </div>
+    <div class="container footer-grid">
+      <p class="footer-name">SUYASH PANDEY</p>
+      <p class="footer-tag mono">AI × DATA × WEB × EXPERIMENTATION</p>
+      <p class="thanks" id="thanks" title="hover me">THANKS FOR SCROLLING. <span class="thanks-star" aria-hidden="true">★</span></p>
+      <p class="footer-legal mono">© 2026 SUYASH PANDEY — BUILT WITH GSAP + LENIS + EXCESSIVE ENTHUSIASM</p>
+    </div>
+    <div class="footer-top mono">
+      <a href="#home" data-scroll>↑ BACK TO REALITY</a>
+    </div>
+  </footer>
+
+  <!-- ═══════════════ PROJECT MODAL ═══════════════ -->
+  <div class="modal" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-panel" id="modal-panel">
+      <button class="modal-close mono" data-close aria-label="Close project details">CLOSE ✕<span class="modal-esc">ESC</span></button>
+      <div class="modal-scroll" id="modal-scroll" data-lenis-prevent>
+        <header class="modal-head">
+          <p class="modal-type mono" id="modal-type">◉ AI PROJECT</p>
+          <h2 class="modal-title" id="modal-title">PROJECT</h2>
+          <p class="modal-year mono" id="modal-year">2025</p>
+        </header>
+        <div class="modal-hero" id="modal-hero" aria-hidden="true"></div>
+        <div class="modal-body" id="modal-body"><!-- injected --></div>
+      </div>
+    </div>
+  </div>
+
+  <noscript>
+    <style>
+      .preloader { display: none !important; }
+      .ticker-track, .ticker-star { white-space: nowrap; }
+    </style>
+  </noscript>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

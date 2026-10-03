@@ -1,0 +1,192 @@
+/* ════════════════════════════════════════════════════════════════
+   experience.css — pinned horizontal journey
+   ════════════════════════════════════════════════════════════════ */
+
+.experience {
+  --stroke-c: var(--paper);
+  position: relative;
+  padding: clamp(6rem, 12vh, 9rem) 0 0;
+}
+
+.xp-head {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 1.5rem 3rem;
+  margin-bottom: clamp(2.5rem, 6vh, 4rem);
+}
+.xp-head .sec-title {
+  flex: 1 1 auto;
+}
+.xp-count {
+  font-size: clamp(1.4rem, 2.4vw, 2rem);
+  font-weight: 700;
+  color: var(--silver);
+  letter-spacing: 0.06em;
+  padding-bottom: 0.4rem;
+}
+#xp-current {
+  color: var(--acid);
+  font-size: 1.4em;
+}
+
+.xp-hint {
+  position: absolute;
+  left: 50%;
+  bottom: 1.4rem;
+  translate: -50% 0;
+  z-index: 5;
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  color: var(--silver);
+  opacity: 0.75;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.xp-wrap {
+  position: relative;
+  padding: 1rem 0 4.5rem;
+}
+.xp-track {
+  display: flex;
+  gap: clamp(1.5rem, 3vw, 3rem);
+  padding-inline: max(1.5rem, calc((100vw - 1280px) / 2));
+  width: max-content;
+  will-change: transform;
+}
+
+/* ── experience card ───────────────────────────────────────── */
+
+.xp-card {
+  --xp-accent: var(--purple);
+  position: relative;
+  width: clamp(300px, 34vw, 480px);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.6rem, 2.4vw, 2.4rem);
+  background: var(--ink);
+  border: 1.5px solid rgba(201, 201, 220, 0.16);
+  border-radius: 1.6rem;
+  overflow: clip;
+  will-change: transform;
+  transition: border-color 0.35s var(--ease-out), box-shadow 0.35s var(--ease-out);
+}
+.xp-card:hover {
+  border-color: var(--xp-accent);
+  box-shadow: 0 24px 60px -20px color-mix(in srgb, var(--xp-accent) 45%, transparent);
+}
+.xp-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 100% 0%, color-mix(in srgb, var(--xp-accent) 22%, transparent), transparent 55%);
+  pointer-events: none;
+}
+.xp-card:nth-child(odd)  { rotate: 1.2deg; }
+.xp-card:nth-child(even) { rotate: -1.2deg; }
+
+.xp-num {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(3rem, 5vw, 4.6rem);
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--xp-accent);
+  letter-spacing: -0.02em;
+}
+.xp-role {
+  margin-top: 0.9rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.7rem, 2.6vw, 2.4rem);
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.01em;
+}
+.xp-org-row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-top: 0.7rem;
+}
+.xp-org {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--xp-accent);
+}
+.xp-dur {
+  margin-top: 1.1rem;
+  align-self: flex-start;
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--xp-accent);
+  color: var(--xp-accent);
+}
+.xp-desc {
+  margin-top: 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: rgba(242, 238, 227, 0.82);
+}
+.xp-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin-top: 1.3rem;
+}
+.xp-tech span {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 0.35rem 0.6rem;
+  border-radius: 0.5rem;
+  background: rgba(201, 201, 220, 0.1);
+  color: var(--silver);
+}
+.xp-key {
+  position: relative;
+  margin-top: auto;
+  padding: 1rem 1.1rem;
+  border-radius: 0.9rem;
+  background: color-mix(in srgb, var(--xp-accent) 14%, var(--ink-2));
+  border-left: 3px solid var(--xp-accent);
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+.xp-key b {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.56rem;
+  letter-spacing: 0.18em;
+  color: var(--xp-accent);
+  margin-bottom: 0.4rem;
+}
+.xp-card > * { position: relative; }
+
+.xp-ghost {
+  position: absolute;
+  bottom: -1.2rem;
+  right: 1rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 7rem;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(201, 201, 220, 0.12);
+  pointer-events: none;
+  user-select: none;
+}
+
+.xp-card-1 { --xp-accent: var(--purple-soft); min-height: 30rem; }
+.xp-card-2 { --xp-accent: var(--cyan);        min-height: 30rem; }
+.xp-card-3 { --xp-accent: var(--acid);        min-height: 30rem; }
+.xp-card-4 { --xp-accent: var(--orange);      min-height: 30rem; }
+.xp-card-5 { --xp-accent: var(--pink);        min-height: 30rem; }
