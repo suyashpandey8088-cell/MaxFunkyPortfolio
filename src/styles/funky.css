@@ -1,0 +1,268 @@
+/* ════════════════════════════════════════════════════════════════
+   funky.css — the playground
+   ════════════════════════════════════════════════════════════════ */
+
+.funky {
+  position: relative;
+  background: var(--acid);
+  color: var(--black);
+  border-radius: 3rem 3rem 0 0;
+  margin-top: -2.5rem;
+  padding: clamp(6rem, 12vh, 9rem) 0 clamp(8rem, 14vh, 12rem);
+  overflow: clip;
+  box-shadow: 0 -22px 60px rgba(0, 0, 0, 0.5);
+  z-index: 6;
+}
+.funky::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(10, 10, 18, 0.16) 1.5px, transparent 1.7px);
+  background-size: 26px 26px;
+  pointer-events: none;
+}
+
+.funky-inner {
+  position: relative;
+}
+.funky-title {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(3.4rem, 11vw, 9rem);
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+}
+.funky-more {
+  display: inline-block;
+  color: var(--black);
+  background: var(--pink);
+  padding: 0 0.14em;
+  rotate: -2deg;
+  border-radius: 0.1em;
+  box-shadow: 0.1em 0.1em 0 var(--black);
+}
+.funky-line {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  font-weight: 500;
+  max-width: 30em;
+  margin-bottom: clamp(3rem, 7vh, 5rem);
+}
+
+/* ── playground ────────────────────────────────────────────── */
+
+.playground {
+  position: relative;
+  min-height: clamp(420px, 60vh, 560px);
+  border: 2px solid var(--black);
+  border-radius: 1.6rem;
+  background: rgba(242, 238, 227, 0.55);
+  box-shadow: 10px 10px 0 var(--black);
+  overflow: hidden;
+  /* vertical page scroll still works on touch; sticks opt out individually */
+  touch-action: pan-y;
+}
+
+/* googly eyes */
+.eyes {
+  position: absolute;
+  top: 12%;
+  left: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+.eye {
+  width: clamp(64px, 9vw, 96px);
+  height: clamp(64px, 9vw, 96px);
+  background: #fff;
+  border: 3px solid var(--black);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.eye + .eye {
+  margin-left: clamp(70px, 10vw, 110px);
+  margin-top: -1.4rem;
+}
+.pupil {
+  width: 34%;
+  height: 34%;
+  background: var(--black);
+  border-radius: 50%;
+  will-change: translate;
+}
+.pupil::after {
+  content: "";
+  display: block;
+  width: 32%;
+  height: 32%;
+  background: #fff;
+  border-radius: 50%;
+  margin: 18% 0 0 42%;
+}
+.eyes-caption {
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  rotate: -3deg;
+  margin-top: 0.6rem;
+  white-space: nowrap;
+}
+
+/* draggable stickers */
+.stick {
+  position: absolute;
+  user-select: none;
+  touch-action: none;
+  will-change: translate;
+  z-index: 4;
+  transition: rotate 0.3s var(--ease-spring);
+}
+.stick:active {
+  scale: 1.06;
+}
+.stick-note {
+  top: 16%;
+  right: 14%;
+  padding: 0.7rem 1.1rem;
+  background: var(--black);
+  color: var(--acid);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  border-radius: 0.7rem;
+  rotate: 5deg;
+}
+.stick-star {
+  top: 58%;
+  left: 16%;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  background: var(--yellow);
+  border: 3px solid var(--black);
+  font-size: 1.8rem;
+  line-height: 1;
+  display: grid;
+  place-items: center;
+  rotate: -8deg;
+}
+.stick-tape {
+  bottom: 20%;
+  right: 8%;
+  padding: 0.55rem 1rem;
+  background: var(--paper);
+  border: 2px dashed var(--black);
+  font-size: 0.6rem;
+  rotate: -4deg;
+}
+.stick-smile {
+  top: 34%;
+  left: 42%;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--cyan);
+  border: 3px solid var(--black);
+  font-size: 1.7rem;
+  display: grid;
+  place-items: center;
+  rotate: 10deg;
+}
+.stick-arrow {
+  bottom: 12%;
+  left: 38%;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--pink);
+  border: 3px solid var(--black);
+  color: var(--black);
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: grid;
+  place-items: center;
+  rotate: -14deg;
+}
+
+/* phrase machine */
+.phrase-machine {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  text-align: center;
+  max-width: min(92%, 30rem);
+  z-index: 2;
+}
+.pm-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  margin-bottom: 0.8rem;
+  color: var(--purple);
+}
+.phrase-out {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 3.2vw, 2.4rem);
+  line-height: 1.1;
+  min-height: 2.4em;
+  margin-bottom: 1.4rem;
+  display: grid;
+  place-items: center;
+}
+.phrase-out q {
+  quotes: "“" "”";
+}
+
+.funky-boop {
+  position: absolute;
+  bottom: 6%;
+  right: 4%;
+  padding: 0.85rem 1.5rem;
+  z-index: 3;
+}
+.sys-msg {
+  position: absolute;
+  bottom: 1rem;
+  left: 1.2rem;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  color: rgba(10, 10, 18, 0.55);
+}
+.hidden-star {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-size: 0.8rem;
+  color: rgba(10, 10, 18, 0.35);
+  transition: color 0.3s, scale 0.3s var(--ease-spring);
+  cursor: pointer;
+}
+.hidden-star:hover {
+  color: var(--pink);
+  scale: 1.4;
+}
+
+/* confetti pieces spawned by JS */
+.confetti {
+  position: absolute;
+  top: -20px;
+  width: 10px;
+  height: 14px;
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 20;
+  will-change: transform;
+}
+
+.funky-foot {
+  margin-top: 2.4rem;
+  text-align: center;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: rgba(10, 10, 18, 0.55);
+}

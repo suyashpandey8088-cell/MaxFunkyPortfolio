@@ -1,0 +1,210 @@
+/* ════════════════════════════════════════════════════════════════
+   responsive.css — recompose (don't shrink) for tablet + mobile
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── tablet ≤ 1024px ───────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .about-cards {
+    position: static;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 3rem;
+    margin-left: 0;
+  }
+  .info-card {
+    position: relative;
+    top: auto !important;
+    right: auto !important;
+    rotate: var(--r, 0deg);
+  }
+  .ic-1 { --r: -1deg; }
+  .ic-2 { --r: 2deg; }
+  .ic-3 { --r: -2deg; }
+  .ic-4 { --r: 1deg; }
+  .ic-5 { --r: -1.5deg; }
+
+  .pcard-ai       { grid-column: 1 / 13; }
+  .pcard-data     { grid-column: 2 / 13; margin-top: 0; }
+  .pcard-web      { grid-column: 1 / 11; margin-top: 0; }
+  .pcard-hack     { grid-column: 2 / 13; margin-top: 0; }
+  .pcard-creative { grid-column: 1 / 10; margin-top: 0; rotate: -1deg; }
+
+  .modal-body {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── mobile ≤ 720px ────────────────────────────────────────── */
+
+@media (max-width: 720px) {
+  .container {
+    width: calc(100% - 2.2rem);
+  }
+
+  /* nav → burger */
+  .nav {
+    display: none;
+  }
+  .nav-burger {
+    display: inline-flex;
+  }
+  .progress {
+    right: 0.55rem;
+  }
+  .progress-track {
+    height: 96px;
+  }
+
+  /* hero: restructured, calmer deco */
+  .f-tag,
+  .f-label,
+  .f-cross,
+  .f-ring-sm {
+    display: none;
+  }
+  .f-star   { left: 6%; top: 11%; font-size: 1.7rem; }
+  .f-arrow  { right: 7%; top: 13%; font-size: 2.2rem; }
+  .f-blob   { width: 84px; height: 84px; top: auto; bottom: 24%; right: 4%; }
+  .f-ring   { width: 60px; height: 60px; left: 7%; top: auto; bottom: 30%; }
+  .f-sticker { left: auto; right: 10%; top: 24%; }
+  .hero-statement { font-size: 0.98rem; }
+
+  /* about */
+  .about {
+    border-radius: 2rem 2rem 0 0;
+  }
+  .about-giant {
+    font-size: 8.5rem;
+    top: 1.5%;
+    right: -6%;
+  }
+  .about-caption {
+    display: none;
+  }
+
+  /* experience: vertical stack (pin disabled in JS) */
+  .xp-hint {
+    display: none;
+  }
+  .xp-track {
+    flex-direction: column;
+    width: auto;
+    padding-inline: 1.1rem;
+    gap: 1.4rem;
+  }
+  .xp-card {
+    width: 100%;
+    min-height: 0;
+  }
+  .xp-card:nth-child(odd)  { rotate: 0.6deg; }
+  .xp-card:nth-child(even) { rotate: -0.6deg; }
+  .xp-count { display: none; }
+
+  /* projects: single column, staggered widths */
+  .project-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+  .pcard {
+    margin-top: 0 !important;
+  }
+  .pcard-ai       { width: 100%; }
+  .pcard-data     { width: 92%; align-self: flex-start; }
+  .pcard-web      { width: 94%; align-self: flex-end; }
+  .pcard-hack     { width: 100%; }
+  .pcard-creative { width: 88%; align-self: flex-start; rotate: -1.2deg; }
+
+  /* skills */
+  .skills-orbit {
+    display: none;
+  }
+  .skill {
+    font-size: clamp(1.7rem, 8.5vw, 2.6rem);
+  }
+  .skill-desc {
+    bottom: 0.9rem;
+    font-size: 0.58rem;
+  }
+
+  /* funky playground */
+  .playground {
+    min-height: 480px;
+  }
+  .phrase-machine {
+    position: static;
+    translate: none;
+    padding: 5.4rem 1.2rem 5.8rem;
+    width: 100%;
+  }
+  .phrase-out {
+    min-height: 3.2em;
+  }
+  .stick-note  { top: 4%;  right: 4%;  }
+  .stick-star  { top: 8%;  left: 3%;   }
+  .stick-smile { top: 26%; left: 58%;  }
+  .stick-tape  { bottom: 26%; right: 3%; }
+  .stick-arrow { bottom: 8%; left: 6%;  }
+  .funky-boop  { bottom: 2.4rem; right: 1rem; }
+  .eyes {
+    top: 4%;
+    left: 34%;
+  }
+  .eye {
+    width: 54px;
+    height: 54px;
+  }
+  .eye + .eye {
+    margin-left: 60px;
+    margin-top: -0.9rem;
+  }
+  .eyes-caption { display: none; }
+
+  /* contact + footer */
+  .contact-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .contact-actions .btn {
+    justify-content: center;
+  }
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  .thanks {
+    grid-column: 1;
+    grid-row: auto;
+    white-space: normal;
+  }
+  .footer-legal {
+    grid-column: 1;
+  }
+}
+
+/* ── reduced motion: neutralise the noise ──────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.2s !important;
+  }
+  .grain {
+    animation: none !important;
+  }
+  .ticker-track,
+  .skill-track {
+    animation: none !important;
+  }
+}

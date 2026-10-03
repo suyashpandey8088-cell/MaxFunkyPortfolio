@@ -1,0 +1,179 @@
+/* ════════════════════════════════════════════════════════════════
+   about.css — paper sheet · editorial grid · info cards · explorer
+   ════════════════════════════════════════════════════════════════ */
+
+.about {
+  --stroke-c: var(--ink);
+  position: relative;
+  background: var(--paper);
+  color: var(--ink);
+  border-radius: 3rem 3rem 0 0;
+  margin-top: -2.5rem;
+  padding: clamp(6rem, 12vh, 9rem) 0 clamp(9rem, 16vh, 13rem);
+  overflow: clip;
+  box-shadow: 0 -22px 60px rgba(0, 0, 0, 0.5);
+  z-index: 6;
+}
+
+/* giant background word, parallaxed by JS */
+.about-giant {
+  position: absolute;
+  top: 4%;
+  right: -2%;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(10rem, 30vw, 26rem);
+  line-height: 0.8;
+  letter-spacing: -0.02em;
+  color: transparent;
+  -webkit-text-stroke: 1.5px rgba(10, 10, 18, 0.13);
+  user-select: none;
+  pointer-events: none;
+  will-change: transform;
+}
+.about-caption {
+  position: absolute;
+  left: 1.4rem;
+  top: 38%;
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  color: rgba(10, 10, 18, 0.45);
+  writing-mode: vertical-rl;
+  rotate: 180deg;
+}
+
+.about-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: start;
+}
+
+.about-head .sec-tag {
+  color: var(--purple);
+}
+
+.about-copy {
+  position: relative;
+  z-index: 2;
+}
+.about-intro {
+  font-size: clamp(1.25rem, 2.3vw, 1.7rem);
+  line-height: 1.45;
+  font-weight: 500;
+}
+.about-intro mark {
+  background: linear-gradient(transparent 62%, var(--acid) 62%);
+  color: inherit;
+  padding: 0 0.12em;
+}
+.about-note {
+  margin-top: 1.6rem;
+  max-width: 34em;
+  font-size: clamp(0.98rem, 1.4vw, 1.12rem);
+  color: rgba(10, 10, 18, 0.72);
+}
+.about-doodle {
+  display: block;
+  margin-top: 1.4rem;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  color: var(--pink);
+  rotate: -1.5deg;
+}
+
+/* ── "currently exploring" cycler ──────────────────────────── */
+
+.exploring {
+  margin-top: 2.8rem;
+  padding: 1.6rem 1.9rem;
+  border: 2px solid var(--ink);
+  border-radius: 1.2rem;
+  background: var(--paper-2);
+  box-shadow: 7px 7px 0 var(--cyan);
+  max-width: 26rem;
+}
+.exploring-label {
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: var(--purple);
+  margin-bottom: 0.6rem;
+}
+.exploring-word {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  overflow: hidden;
+  display: block;
+}
+.exploring-word-inner {
+  display: inline-block;
+  will-change: transform;
+}
+
+/* ── floating info cards ───────────────────────────────────── */
+
+.about-cards {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 3;
+}
+.info-card {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.85rem 1.15rem;
+  background: var(--paper);
+  border: 2px solid var(--ink);
+  border-radius: 0.9rem;
+  box-shadow: 5px 5px 0 rgba(10, 10, 18, 0.9);
+  pointer-events: auto;
+  will-change: transform;
+  transition: rotate 0.35s var(--ease-spring), box-shadow 0.3s var(--ease-out), translate 0.35s var(--ease-spring);
+}
+.info-card:hover {
+  rotate: 0deg !important;
+  translate: -3px -3px;
+  box-shadow: 9px 9px 0 var(--pink);
+}
+.ic-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+.ic-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.ic-idx {
+  font-size: 0.56rem;
+  color: rgba(10, 10, 18, 0.4);
+  margin-left: 0.2rem;
+}
+
+.ic-1 { top: 9%;  right: 6%;  rotate: 3deg; }
+.ic-1 .ic-icon { color: var(--purple); }
+.ic-2 { top: 27%; right: 30%; rotate: -4deg; }
+.ic-2 .ic-icon { color: var(--orange); }
+.ic-3 { top: 47%; right: 4%;  rotate: -2deg; }
+.ic-3 .ic-icon { color: var(--cyan); }
+.ic-4 { top: 63%; right: 34%; rotate: 5deg; }
+.ic-4 .ic-icon { color: var(--pink); }
+.ic-5 { top: 79%; right: 9%;  rotate: -3deg; }
+.ic-5 .ic-icon { color: var(--purple); }
+
+.ic-1 { background: var(--paper); }
+.ic-2 { background: var(--yellow); }
+.ic-3 { background: var(--paper); }
+.ic-4 { background: var(--acid); }
+.ic-5 { background: var(--paper); }
